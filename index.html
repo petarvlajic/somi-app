@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jira Assistant</title>
+  </head>
+  <body class="bg-background text-white flex items-center justify-center min-h-screen transition-all duration-500">
+    <div class="w-full max-w-2xl shadow-2xl rounded-2xl bg-primary flex flex-col h-[85vh] border border-secondary">
+      <!-- Header -->
+      <div class="bg-accent text-white text-xl font-semibold px-6 py-4 rounded-t-2xl shadow-md flex justify-between items-center">
+        <div class="flex items-center">
+          <!-- Optional: Add an icon -->
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <span>Jira Assistant – Project NIHK</span>
+        </div>
+        <span class="text-sm text-white/80">v1.0</span>
+      </div>
+
+      <!-- Chat Area -->
+      <div
+        id="chat-box"
+        class="flex-1 overflow-y-auto px-4 py-4 space-y-6 bg-secondary transition-all duration-300 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"
+      >
+        <!-- Messages will appear here -->
+      </div>
+
+      <!-- Input Area -->
+      <div class="px-4 py-3 border-t border-light flex items-center gap-2 bg-secondary rounded-b-2xl">
+        <input
+          id="user-input"
+          type="text"
+          placeholder="Ask something about the project..."
+          class="flex-1 px-4 py-2 rounded-xl text-sm bg-background text-white border border-light placeholder-light focus:outline-none focus:ring-2 focus:ring-light transition duration-300"
+        />
+        <button
+          id="send-btn"
+          class="bg-bubbleUser text-white px-4 py-2 rounded-xl hover:bg-opacity-80 transition-all duration-300 shadow-md flex items-center"
+        >
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+          Send
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
